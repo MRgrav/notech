@@ -1,0 +1,194 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    width: 400px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    /* margin-top: 10px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #333;
+    margin: 10px 0px;
+}
+
+h3.dark-mode {
+    color: #aaa;
+}
+
+.header, .container, .note-container, .button-group {
+    display: flex;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-between; /* Space between heading and toggle */
+}
+
+.header > div {
+    display: flex;
+}
+
+.header > div > img{
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    padding-right: 4px;
+}
+
+.container, .note-container {
+    flex-direction: column;
+}
+
+.button-group {
+    align-items: end;
+    /* justify-content: space-around; */
+}
+
+
+textarea {
+    width: auto;
+    /* width: 100%; */
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    resize: none; /* Prevents resizing */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+textarea.dark-mode {
+    border-color: #666;
+    background-color: #555;
+    color: #fff;
+}
+
+button {
+    /* background-color: white; */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#save {
+    background-color: white;
+    /* background-color: #4CAF50; */
+    color: #45a049;
+}
+
+#save:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+#clear {
+    background-color: white;
+    /* background-color: #af664c; */
+    color: #a04e45;
+}
+
+#clear:hover {
+    background-color: #a04e45;
+    color: white;
+}
+
+/* button:hover {
+    background-color: #45a049;
+} */
+
+/* Dark mode button styles */
+body.dark-mode button {
+    background-color: #6a994e;
+}
+
+/* From Uiverse.io by Voxybuns */ 
+/* The switch - the box around the slider */
+.switch {
+    /* Variables */
+   --switch_width: 2em;
+   --switch_height: 1em;
+   --thumb_color: #e8e8e8;
+   --track_color: #e8e8e8;
+   --track_active_color: #888;
+   --outline_color: #000;
+   font-size: 17px;
+   position: relative;
+   display: inline-block;
+   width: var(--switch_width);
+   height: var(--switch_height);
+   margin: 8px 0px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+   box-sizing: border-box;
+   border: 2px solid var(--outline_color);
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--track_color);
+   transition: .15s;
+   border-radius: var(--switch_height);
+  }
+  
+  .slider:before {
+   box-sizing: border-box;
+   position: absolute;
+   content: "";
+   height: var(--switch_height);
+   width: var(--switch_height);
+   border: 2px solid var(--outline_color);
+   border-radius: 100%;
+   left: -2px;
+   bottom: -2px;
+   background-color: var(--thumb_color);
+   transform: translateY(-0.2em);
+   box-shadow: 0 0.2em 0 var(--outline_color);
+   transition: .15s;
+  }
+  
+  input:checked + .slider {
+   background-color: var(--track_active_color);
+  }
+  
+  input:focus-visible + .slider {
+   box-shadow: 0 0 0 2px var(--track_active_color);
+  }
+  
+  /* Raise thumb when hovered */
+  input:hover + .slider:before {
+   transform: translateY(-0.3em);
+   box-shadow: 0 0.3em 0 var(--outline_color);
+  }
+  
+  input:checked + .slider:before {
+   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+  }
+  
+  /* Raise thumb when hovered & checked */
+  input:hover:checked + .slider:before {
+   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+   box-shadow: 0 0.3em 0 var(--outline_color);
+  }

@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Quick Notes",
+    "name": "Notech",
     "version": "1.0",
     "description": "A simple note-taking extension.",
     "permissions": ["storage"],
